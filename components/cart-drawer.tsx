@@ -159,7 +159,7 @@ export function CartDrawer() {
 
             {items.length > 0 && (
               <div className="border-t pt-4 space-y-4">
-                <div className="space-y-1">
+                <div className="space-y-1 p-3">
                   <div className="flex justify-between text-sm">
                     <span>Total (USD):</span>
                     <span className="font-bold">{formatPrice(getTotal("dolares"), "dolares")}</span>
@@ -173,7 +173,7 @@ export function CartDrawer() {
                     <span>{formatPrice(getTotal("pesos"), "pesos")}</span>
                   </div>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2 p-3">
                   <Button variant="outline" onClick={clearCart} className="flex-1 bg-transparent">
                     Vaciar
                   </Button>

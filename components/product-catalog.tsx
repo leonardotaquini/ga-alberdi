@@ -96,13 +96,13 @@ export function ProductCatalog() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
-                <Image src={logoSrc} alt="Logo" className=" w-32 inline-block mb-1" />
+              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-1 flex items-center sm:flex-row flex-col gap-3">
+                <Image src={logoSrc} alt="Logo" width={100} className=" inline-block mb-1 " />
                 Catálogo de Productos
                 </h1>
-              <p className="text-sm md:text-base text-muted-foreground">Informática GA - Paraguay</p>
+              <p className="text-sm md:text-base sm:text-start text-center text-muted-foreground">Informática GA - Paraguay</p>
             </div>
-            <div className="flex gap-4 self-start md:self-auto">
+            <div className="flex gap-4 self-center sm:self-auto md:self-auto">
               <div className="text-left md:text-right">
                 <div className="text-xl md:text-2xl font-bold text-primary">{stats.total}</div>
                 <div className="text-xs text-muted-foreground">Productos</div>
