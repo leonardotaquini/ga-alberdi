@@ -11,7 +11,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Catálogo de Productos - Informática GA",
   description: "Catálogo completo de productos electrónicos con precios en múltiples monedas",
-  generator: "leotaquini",
+  generator: "leonardotaquini",
   icons: {
     icon: [
       {

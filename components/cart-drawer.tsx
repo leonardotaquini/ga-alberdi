@@ -56,7 +56,7 @@ export function CartDrawer() {
 
     message += `💰 *Total: ${formatPrice(total, currency)}*\n`
     message += `💳 *Moneda de pago:* ${monedaDisplay[formData.moneda]}\n`
-    message += `🚚 *Entrega:* ${formData.entrega === "domicilio" ? "A domicilio" : "Retiro en local de Norma Cáceres"}\n`
+    message += `🚚 *Entrega:* ${formData.entrega === "domicilio" ? "A domicilio" : "Retiro en local de Norma"}\n`
 
     const whatsappNumber = "5493704320838"
     const encodedMessage = encodeURIComponent(message)
@@ -77,11 +77,12 @@ export function CartDrawer() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="default" size="lg" className="relative rounded-md">
+        <Button size="lg" className="relative shadow-lg">
           <ShoppingCart className="h-5 w-5" />
-          
           {itemCount > 0 && (
-            <Badge className="absolute -top-2 -right-2 h-6 w-6 flex items-center justify-center p-0 bg-green-700">{itemCount}</Badge>
+            <Badge className="absolute -top-2 -right-2 h-6 w-6 flex items-center justify-center p-0 bg-background text-foreground border-2 border-primary">
+              {itemCount}
+            </Badge>
           )}
         </Button>
       </SheetTrigger>
@@ -158,7 +159,7 @@ export function CartDrawer() {
 
             {items.length > 0 && (
               <div className="border-t pt-4 space-y-4">
-                <div className="space-y-1 p-4">
+                <div className="space-y-1">
                   <div className="flex justify-between text-sm">
                     <span>Total (USD):</span>
                     <span className="font-bold">{formatPrice(getTotal("dolares"), "dolares")}</span>
@@ -172,7 +173,7 @@ export function CartDrawer() {
                     <span>{formatPrice(getTotal("pesos"), "pesos")}</span>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-2 px-4 pb-4">
+                <div className="flex gap-2">
                   <Button variant="outline" onClick={clearCart} className="flex-1 bg-transparent">
                     Vaciar
                   </Button>
