@@ -282,7 +282,6 @@ export function ProductCatalog() {
                             {product.producto}
                           </h3>
                           <div className="flex items-baseline gap-2 mb-4">
-                            <DollarSign className="h-5 w-5 text-primary" />
                             <span className="text-2xl font-bold text-primary">
                               {formatPrice(product[selectedCurrency], selectedCurrency)}
                             </span>
