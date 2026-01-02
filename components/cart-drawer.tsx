@@ -186,7 +186,7 @@ export function CartDrawer() {
           </>
         ) : (
           <>
-            <div className="flex-1 overflow-y-auto py-4 space-y-4">
+            <div className="flex-1 overflow-y-auto py-4 space-y-4 p-3">
               <div className="space-y-2">
                 <Label htmlFor="nombre">Nombre</Label>
                 <Input
@@ -249,7 +249,7 @@ export function CartDrawer() {
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="retiro" id="retiro" />
                     <Label htmlFor="retiro" className="font-normal cursor-pointer">
-                      Retiro en local de Norma Cáceres
+                      Retiro en local de Norma
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -283,7 +283,7 @@ export function CartDrawer() {
               </div>
             </div>
 
-            <div className="border-t pt-4 flex gap-2">
+            <div className="border-t pt-4 flex gap-2 p-3">
               <Button variant="outline" onClick={() => setShowCheckout(false)} className="flex-1">
                 Volver
               </Button>
